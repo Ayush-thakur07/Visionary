@@ -1,0 +1,311 @@
+/* Logo circle - initials container */
+.logo-circle {
+  border: 2px solid #ffd700;  /* Gold border */
+  border-radius: 50%;  /* Perfect circle */
+  padding: 10px 15px;  /* Internal padding */
+  font-weight: bold;
+  color: #ffd700;  /* Gold text */
+  position: relative;
+  top: 20px;  /* 20px from top */
+  left: 80px;  /* 20px from left */
+  z-index: 10;  /* Stays on top */
+  background: rgba(0,0,0,0.5);  /* Semi-transparent background */
+}
+
+/* Logo container - holds circle + name */
+.top-left-logo {
+  position: absolute;  /* Fixed in top-left */
+  top: 20px;
+  left: 20px;
+  z-index: 2;  /* Above orbit (z-index: 3 is only for orbit itself) */
+  display: flex;  /* Aligns circle and name horizontally */
+  align-items: center;  /* Vertical centering */
+  gap: 10px;  /* Space between circle and name */
+}
+
+/* Logo name text */
+.top-left-logo p {
+  margin: 0;  /* Remove default paragraph margin */
+  color: #ffd700;  /* Gold text */
+  font-weight: bold;
+  font-size: 1rem;  /* Normal text size */
+  position: relative;
+  top: 60px;
+}
+.fade-in
+{
+    animation: fadeIn 2s ease-in;
+}
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(100);
+
+    }
+    to 
+    {
+        opacity: 1;
+        transform: translatey(10);
+    }
+}
+/*
+  HERO CONTAINER - Main Section
+  Full viewport background with centered content
+*/
+.hero-container {
+  background: url("Background.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;  /* Full viewport height */
+  display: flex;  /* Centers all child elements */
+  align-items: center;
+  justify-content: center;
+  position: relative;  /* Base for absolutely positioned children */
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/*
+  DARK OVERLAY - Pseudo-element
+  Darkens background image for better text contrast
+*/
+.hero-container::before {
+  content: "";  /* Required for pseudo-elements */
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;  /* Covers entire container */
+  background: rgba(0,0,0,0.6);  /* 60% black transparency */
+  z-index: 1;  /* Sits below content but above background */
+}
+
+/*
+  CONTENT OVERLAY - Text Area
+  Contains main title and tagline - positioned above overlay
+*/
+.icon-node:hover {
+  box-shadow: 0 0 20px #ffd700;   /* glowing ring */
+  transform: scale(1.2);          /* grows slightly */
+  background-color: rgba(255, 215, 0, 0.2);
+  cursor: pointer;
+}
+.icon-node:hover i {
+  color: #fff;
+}
+.icon-node a {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+#name
+{
+  opacity: 0;
+  transition:opacity 0.3s, transform 0.3s;
+}
+#name:hover
+{
+  opacity: 1;
+  transform: translateY(0px);
+  color: rgba(255, 215, 0, 0.3);
+  
+}
+.content-overlay {
+  position: relative;
+  z-index: 2;  /* Above dark overlay (z-index: 1) */
+  text-align: center;
+}
+.main-title
+{
+  font-family: "Brush Script MT","Lucida Handwriting",cursive;
+  text-shadow: rgb(255, 255, 255) 0px 0px 8px, rgba(255, 255, 255, 0.6) 0px 0px 15px, rgba(255, 215, 0, 0.4) 0px 0px 25px, rgba(255, 215, 0, 0.3) 0px 0px 35px, rgba(255, 255, 255, 0.2) 0px 0px 45px;
+}
+.subtitle_visionary
+{
+  font-family: "Brush Script MT","Lucida Handwriting",cursive;
+}
+
+/*
+  MAIN TITLE - "Work"
+  Large serif font for visual impact
+*/
+.main-title {
+  font-size: 5rem;  /* Very large text */
+  font-style: italic;  /* Italic styling */
+  font-family: Georgia, serif;  /* Classic serif font */
+  letter-spacing: -2px;  /* Tight spacing for modern look */
+  margin: 10px 0;  /* Spacing between "THE" and "Partner" */
+}
+
+/*
+  SUBTITLE - "THE" and "Partner"
+  Stylized subtitle with wide letter spacing
+*/
+.subtitle_visionary {
+  letter-spacing: 0.5rem;  /* Wide spacing for emphasis */
+  font-weight: bold;  /* Bold text */
+  opacity: 0.8;  /* Slightly transparent */
+}
+
+/*
+  ORBIT CONTAINER - Icon Rotation
+  Circular container that rotates continuously
+  All social icon buttons orbit around this center
+*/
+.orbit {
+  position: absolute;
+  width: 300px;  /* 300px diameter circle */
+  height: 300px;
+  top: 50%;  /* Center vertically */
+  left: 50%;  /* Center horizontally */
+  transform: translate(-50%, -50%);  /* Perfect center positioning */
+  animation: spin 20s linear infinite;  /* Rotates 360° every 20 seconds */
+  z-index: 3;  /* Above all other elements */
+}
+
+/*
+  ICON NODES - Social Media Buttons
+  Individual circular buttons positioned around orbit
+  Rotated individually to keep text upright during orbit spin
+*/
+.icon-node {
+  border: 1px solid #ffd700;  /* Gold circle border */
+  border-radius: 50%;  /* Makes it circular */
+  width: 60px;  /* 60px diameter circles */
+  height: 60px;
+  display: flex;  /* Centers icon and text */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffd700;  /* Gold text color */
+  background: rgba(0,0,0,0.5);  /* Semi-transparent black background */
+  transition: 0.3s ease;  /* Smooth hover effect */
+  position: absolute;  /* Positioned relative to .orbit parent */
+}
+
+/*
+  ICON & TEXT STYLING
+  Icon: Bootstrap icon font (1.5rem size)
+  Text: Small white labels below icons
+*/
+.icon-node i {
+  font-size: 1.5rem;  /* Icon size */
+  color: #ffd700;  /* Gold color */
+}
+
+.icon-node p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 5px 0 0;
+  font-size: 0.8rem;
+  color: #fff
+}
+/*
+  ICON NODE POSITIONS - Around Orbit
+  Each position uses absolute positioning to place
+  icons around the circular orbit path
+*/
+
+/* Mail icon - right side, top */
+.mail {
+  top: 10px;  /* Near top */
+  left: 100%;  /* At right edge of orbit circle */
+  transform: translateX(-50%);  /* Center it horizontally */
+}
+
+/* Portfolio icon - right side, bottom */
+.portfolio {
+  bottom: 10px;  /* Near bottom */
+  left: 100%;  /* At right edge of orbit circle */
+  transform: translateX(-50%);  /* Center it horizontally */
+}
+
+/* LinkedIn icon - left side, top */
+.linkedin {
+  top: 10px;  /* Near top */
+  right: 100%;  /* At left edge of orbit circle */
+  transform: translateX(50%);  /* Center it horizontally */
+}
+
+/* GitHub icon - left side, bottom */
+.github {
+  bottom: 10px;  /* Near bottom */
+  right: 100%;  /* At left edge of orbit circle */
+  transform: translateX(50%);  /* Center it horizontally */
+}
+
+/* Achievement icon - bottom center */
+.achievement {
+  top: 100%;  /* Below orbit circle */
+  left: 50%;  /* Slightly offset from center */
+  transform: translateY(-50%,-50%);  /* Center it vertically */
+}
+/*
+  HOVER EFFECTS - Interactive Feedback
+  When user hovers over icon buttons
+*/
+.top-left-logo:hover{
+  transform: scale(1.2);  
+  cursor: pointer;  
+}
+.icon-node:hover {
+  display: block;
+  background-color: rgba(255, 215, 0, 0.2);  /* Gold glow background */
+  transform: scale(1.2);  /* Grows 20% larger */
+  cursor: pointer;  /* Shows clickable cursor */
+  opacity: 1;
+}
+
+.icon-node:hover i {
+  color: #fff;  /* Icon turns white */
+}
+
+.icon-node:hover p {
+  color: #ffd700;  /* Label stays gold */
+}
+
+/*
+  LOGO SECTION - Top Left Corner
+  Fixed position logo that does NOT rotate with orbit
+  Shows initials (AT) and full name
+*/
+/*
+  TEXT CONTENT STYLING - Center Hero Text
+  Subtitle, main title, and footer name
+*/
+
+/* Subtitle - "THE" and "Partner" */
+.subtitle {
+  font-size: 1.2rem;  /* Medium size */
+  letter-spacing: 0.2rem;  /* Spaced out */
+  opacity: 0.9;  /* Slightly transparent */
+  margin: 10px 0;  /* Spacing around subtitles */
+}
+
+/* Footer name - "Ayush Thakur" below title */
+.name-footer {
+  margin-top: 20px;  /* Space above footer name */
+  font-size: 1rem;  /* Normal text size */
+  opacity: 0.8;  /* More transparent than subtitle */
+}
+
+/*
+  ORBIT ANIMATION - Continuous Rotation
+  Spins the entire orbit container 360 degrees
+  Takes 20 seconds per full rotation
+*/
+@keyframes spin {
+  from { 
+    transform: translate(-50%, -50%) rotate(0deg);  /* Start position */
+  }
+  to { 
+    transform: translate(-50%, -50%) rotate(360deg);  /* Full rotation */
+  }
+}
+
+/* Optional: stop orbit rotation (if needed for pausing) */
+.orbit.still {
+  animation: none;  /* Removes spinning animation */
+}
