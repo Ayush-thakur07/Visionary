@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+        <input type="submit" value="Submit" id="Store">
+    </form>
+    <p id="hello"></p>
+    <script>
+        function click() {
+            let cl = document.getElementById("hello");
+        }
+
+        function dbl() {
+            document.getElementById("hello").innerHTML = "Button double-clicked!";
+        }
+        let form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let mail = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", mail);
+            localStorage.setItem("message", message);
+            alert("Form submitted! Name: " + name
+                + ", Email: " + mail
+                + ", Message: " + message
+            );
+        });
+    </script>
+    
+</body>
+</html>
