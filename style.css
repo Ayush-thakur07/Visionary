@@ -323,3 +323,15 @@
 .orbit.still {
   animation: none;  /* Removes spinning animation */
 }
+#first
+{
+  font-family: Georgia, serif; 
+  text-shadow: rgb(255, 255, 255) 0px 0;
+}
+#button
+{
+  box-shadow: 0 0 20px #ffd700;   /* glowing ring */
+  transform: scale(1.2);          /* grows slightly */
+  background-color: rgba(255, 215, 0, 0.2);
+  cursor: pointer;
+}

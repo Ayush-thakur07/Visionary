@@ -6,30 +6,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="achiv.css">
 </head>
 <body>
+    <h1 class="a">Achivements</h1>
+    <div class="card-container">
+    <div class="card" style="width: 22rem; height: 22rem;">
+      <img src="school.jpeg" class="card-img-top" alt="school">
+      <div class="card-body">
+        <h5 class="card-title">Schooling</h5>
+        <p class="card-text">This page is about my Schooling</p>
+        <button onclick="about()" class="btn btn-primary">about</button>
+      </div>
+    </div>
+    <div class="card" id="second" style="width: 22rem;">
+      <img src="pills.jpeg" class="card-img-top" alt="first" style="height: 25rem;">
+      <div class="card-body">
+        <p class="card-text">Pills of Code my first hackathon where I learnt about coding and not only that the experience of working in a team.We reached to final round of the hackathon HackNexus.
+        </p>
+      </div>
+    </div>
     <div class="card" style="width: 18rem;">
-  <img src="school.jpeg" class="card-img-top" alt="school">
-  <div class="card-body">
-    <h5 class="card-title">Schooling</h5>
-    <p class="card-text">This page is about my Schooling</p>
-    <a href="school.html" class="btn btn-primary">About</a>
-  </div>
-</div>
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="first">
-  <div class="card-body">
-    <p class="card-text">Pills of Code 
-        my first hackathon where I learnt about coding and not only that the experience of working in a team.We reached to final round of the hackathon HackNexus.
-    </p>
-  </div>
-</div>
-    <h1>Schooling</h1>
-    <ul>
-        <li>House Captain</li>
-        <li>Got NCC A certificate</li>
-        <li>Air rifle shooting third position inter house compitition</li>
-    </ul>
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+      </div>
+    </div>
+    </div>
    <h2>Sports</h2>
    <ol>
     <li>Air rifle shooter</li>
@@ -45,5 +48,13 @@
      <li>Secured 77.4% in 12th CBSE</li>
      <li>Secured 9.29 CGPA in 1st year</li>
     </ul>
+    <script>
+        function about(){
+          window.alert("You are being redirected to the school page");
+          setTimeout(()=>{
+            window.location.href="school.html";
+          }, 1000);
+        }
+    </script>
 </body>
 </html>
