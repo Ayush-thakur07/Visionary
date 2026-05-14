@@ -19,7 +19,19 @@ function click() {
                 + ", Message: " + message
             );
         });
-        let a=document.getElementById("show");
-        a = ["This page will tell you about me only",
-            "There are many like me but this one is mine"
-        ];
+        function type(text, elementId, speed = 50){
+            let i = 0;
+            let output = document.getElementById(elementId);
+            output.innerHTML = "";
+            function typeWriter() {
+                if (i < text.length) {
+                    output.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+        }
+        setTimeout(() => {type("Hello I am greatful that you are here", "greet", 100); }, 500);
+        setTimeout(() => {type("Leave the message i'll get back to you soon","hello", 100); }, 4500);
+        setTimeout(() => {type("Thanks for contacting me...","effect", 100); }, 9500);

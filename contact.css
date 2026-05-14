@@ -1,0 +1,81 @@
+.myForm{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+
+}   
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("contact.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #fff; /* makes text readable on dark background */
+}
+
+.myForm {
+  display: flex;
+  flex-direction: column;   /* stack inputs vertically */
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  height: 100vh;            /* full screen height */
+}
+
+form {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent box */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: darkorange;
+}
+#greet {
+  position: absolute;   
+  top: 10px;            
+  left: 10px;           
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+}
+#hello {
+  position: absolute;   
+  top: 40px;            
+  left: 10px;           
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+}
+#effect {
+  position: absolute;   
+  top: 70px;            
+  left: 10px;           
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+}
