@@ -1,4 +1,3 @@
-
 let arr2 = ["Schooling","House Captain","Got NCC A certificate", "Air rifle shooting third position inter house compitition"];
 let line = 0;
 let word = 0;
