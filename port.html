@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayush Thakur - Résumé</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .resume-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 20px;
+    }
+    p, li {
+      line-height: 1.6;
+      color: #555;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    .contact-info a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <h1>Ayush Thakur</h1>
+    <div class="contact-info" onmouseup ="effect()">
+      <p>Email: <a href="mailto:ayushtha922@gmail.com">ayushtha922@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918250518330">+91 8250518330</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/ayush-thakur-9b6988382" target="_blank">linkedin.com/in/ayush-thakur-9b6988382</a></p>
+      <p>GitHub: <a href="https://github.com/ayushtha92-2-sketch" target="_blank">github.com/ayushtha92-2-sketch</a></p>
+    </div>
+    <div onmousedown="School()">
+    <h2>Education</h2>
+    <p>10th: 2022–2023 — Army Public School Beas</p>
+    <p>12th: 2024–2025 — Army Public School Beas</p>
+    </div>
+
+    <h2>Experience / Participation</h2>
+    <ul>
+      <li>House Captain at Army Public School Beas</li>
+      <li>Former Member of the National Cadet Corps (NCC)</li>
+      <li>Finalist in Formula Hacks 2025</li>
+      <li>Finalist in Hack Nexus 1.0 (2025)</li>
+      <li>Finalist in HackNWin 3.0 (2026)</li>
+      <li>3rd Position in Inter-House Air Rifle Shooting Competition (Under-17)</li>
+      <li>Class Monitor in multiple academic years (Army Public Schools across India)</li>
+      <li>Adaptability from living in diverse cities across India</li>
+      <li>Active participation in dance, acting, compering, debates, and more</li>
+    </ul>
+
+    <h2>Skills & Abilities</h2>
+    <ul>
+      <li>Leadership & Team Management</li>
+      <li>Communication & Public Speaking</li>
+      <li>Discipline & Responsibility</li>
+      <li>Adaptability & Cultural Awareness</li>
+      <li>Problem-Solving & Logical Thinking</li>
+      <li>Creativity & Event Management</li>
+      <li>Technical Skills: Python, HTML, CSS, MySQL</li>
+      <li>Collaboration & Interpersonal Skills</li>
+    </ul>
+  </div>
+  <script>
+    function effect() {
+        window.alert("You are on the contact page, you can contact me through email or phone or you can also check my LinkedIn and GitHub profiles");
+    }
+    function School(){
+        window.alert("You are being redirected to my school page");
+        setTimeout(()=>{
+            window.location.href="https://www.apsbeas.org/";}, 500);
+        }
+  </script>
+</body>
+</html>
