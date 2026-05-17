@@ -18,3 +18,20 @@ function typewriter(){
     }
 }
 typewriter();
+function type(text, elementId, speed = 25){
+    let i = 0;
+    const a = document.getElementById(elementId);
+    const typing = () => {
+        if (i < text.length) {
+            a.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
+    };
+    typing();
+}
+setTimeout(() => {type("Schooling", "h1"); }, 2000);
+setTimeout(() => {type("Betthelium Academy", "first"); }, 6500);
+setTimeout(() => {type("Army Public School Kota", "two"); }, 7300);
+setTimeout(() => {type("Army Public School Narangi", "three"); }, 8000);
+setTimeout(() => {type("Army Public School Beas", "four"); }, 9000);
