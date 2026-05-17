@@ -34,7 +34,7 @@ function type(text, elementId, speed = 25){
     };
     typing();
 }
-setTimeout(() => {type("Schooling", "h1"); }, 2000);
+setTimeout(() => {type("Schools", "h1"); }, 2000);
 setTimeout(() => {type("Betthelium Academy", "first"); }, 6500);
 setTimeout(() => {type("Army Public School Kota", "two"); }, 7300);
 setTimeout(() => {type("Army Public School Narangi", "three"); }, 8000);
