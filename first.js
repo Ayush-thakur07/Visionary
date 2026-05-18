@@ -1,3 +1,6 @@
+function hi() {
+  window.alert("Welcome to my website");
+}
 function hello() {
   console.log("This is title of the website");
 }

@@ -35,3 +35,8 @@ function click() {
         setTimeout(() => {type("Hello I am greatful that you are here", "greet", 100); }, 500);
         setTimeout(() => {type("Leave the message i'll get back to you soon","hello", 100); }, 4500);
         setTimeout(() => {type("Thanks for contacting me...","effect", 100); }, 9500);
+        function effort(){
+            let text = "This page shows that what I have done and this is starting of a long journy the main events are remainig ...";
+            setTimeout(() => {type(text, "new", 25);}, 0);
+        } 
+        window.alert("Namaste and welcome to my contact page! ");
