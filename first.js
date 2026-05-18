@@ -1,3 +1,6 @@
+function hello() {
+  console.log("This is title of the website");
+}
 function redirect() {
     document.getElementById("Button").innerHTML = "Redirecting...";
     setTimeout(function(){
@@ -19,16 +22,16 @@ function typewriter(text, elementId, speed = 50) {
 }
 setTimeout(() => {
   typewriter("THE", "first");
-}, 2000);
+}, 1000);
 
 setTimeout(() => {
   typewriter("Work", "second");
-}, 3000);
+}, 1700);
 
 setTimeout(() => {
   typewriter("Partner", "third");
-}, 4000);
+}, 3000);
 
 setTimeout(() => {
   typewriter("Ayush Thakur", "fourth");
-}, 5000);
+}, 3700);

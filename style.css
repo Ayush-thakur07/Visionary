@@ -129,6 +129,12 @@
   position: relative;
   z-index: 2;  /* Above dark overlay (z-index: 1) */
   text-align: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .main-title
 {
